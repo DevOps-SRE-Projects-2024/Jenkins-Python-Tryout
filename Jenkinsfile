@@ -17,9 +17,7 @@ pipeline {
             steps {
                 script {
                     sh "pwd"
-                    sh "sudo apt-get update -y"
-                    sh "sudo apt-get install python3 python3-pip -y"
-                    sh "sudo pip3 install Flask"
+                    sh "pip3 install Flask"
                     sh "nohup python3 app.py &"  // Run Flask in the background
                 }
             }
