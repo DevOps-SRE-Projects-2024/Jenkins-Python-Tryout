@@ -21,8 +21,9 @@ pipeline {
                 script {
                     // Set up virtual environment and install dependencies
                     sh "pwd"
-                    sh "sudo apt-get update -y"
-                    sh "sudo apt-get install python3 python3-pip -y"
+                    sh "sudo su -"
+                    sh "apt-get update -y"
+                    sh "apt-get install python3 python3-pip -y"
                     sh "pip3 install Flask"
                     sh "python3 app.py"
                 }
