@@ -4,12 +4,7 @@ pipeline {
         GIT_REPO_URL = 'https://github.com/DevOps-SRE-Projects-2024/Jenkins-Python-Tryout.git'
         // Replace 'username', 'password', 'yourusername', and 'yourrepository' with your actual values
     }
-  agent {
-    docker {
-      image 'abhishekf5/maven-abhishek-docker-agent:v1'
-      args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
-    }
-  }
+ agent any 
   stages {
     stage('Checkout') {
       steps {
