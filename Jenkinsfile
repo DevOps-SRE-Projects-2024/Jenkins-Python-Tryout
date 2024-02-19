@@ -19,6 +19,7 @@ pipeline {
                         git branch: 'main', credentialsId: 'git_creds_id', url: "${GIT_REPO_URL}"
                     }
       }
+    } 
     }
     stage('Setup') {
             steps {
@@ -29,6 +30,5 @@ pipeline {
                 }
             }
         }
-    }
   }
 }
