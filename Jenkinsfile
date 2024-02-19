@@ -26,7 +26,7 @@ pipeline {
                 script {
                     // Set up virtual environment and install dependencies
                     sh "pwd"
-                    sh "pip install -r requirements.txt"
+                    sh "python3 app.py"
                 }
             }
         }
